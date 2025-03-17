@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    width: 21cm;
+    height: 29.7cm;
+  } 
+}
+
+.tagPage {
+  padding: 13mm .5mm 13mm .5mm;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 210mm;
+  break-after: page;
+}
+
+.tagPage:last-child {
+  break-after: avoid;
+}
+
+.tagPage div {
+  padding: 1mm;
+  float: left;
+  width: 68mm;
+  height: 65.7mm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagPage div img {
+  max-height:100%;
+  max-width:100%;
+}
